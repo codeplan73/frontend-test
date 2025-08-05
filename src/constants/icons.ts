@@ -1,0 +1,25 @@
+import cardIcon1 from "@/assets/icons/card-icon-1.png";
+import cardIcon2 from "@/assets/icons/card-icon-2.png";
+import checkIcon from "@/assets/icons/check-icon.png";
+import commentIcon from "@/assets/icons/comment.png";
+import googleIcon from "@/assets/icons/Google-icon.png";
+import lackOpenIcon from "@/assets/icons/lock_open-icon.png";
+import mailAltIcon from "@/assets/icons/Mail-alt-icon.png";
+import mailIcon from "@/assets/icons/Mail-icon.png";
+import mailSentIcon from "@/assets/icons/mail-sent-icon.png";
+import nameIcon from "@/assets/icons/Name-icon.png";
+import shareIcon from "@/assets/icons/share.png";
+
+export default {
+  cardIcon1,
+  cardIcon2,
+  checkIcon,
+  commentIcon,
+  googleIcon,
+  lackOpenIcon,
+  mailAltIcon,
+  mailIcon,
+  mailSentIcon,
+  nameIcon,
+  shareIcon,
+};
