@@ -8,6 +8,7 @@ import lackOpenIcon from "@/assets/icons/lock_open-icon.png";
 import mailAltIcon from "@/assets/icons/Mail-alt-icon.png";
 import mailIcon from "@/assets/icons/Mail-icon.png";
 import mailSentIcon from "@/assets/icons/mail-sent-icon.png";
+import mailConfirmation from "@/assets/icons/mail-confirmation.png";
 import nameIcon from "@/assets/icons/Name-icon.png";
 import shareIcon from "@/assets/icons/share.png";
 
@@ -22,6 +23,7 @@ export default {
   mailAltIcon,
   mailIcon,
   mailSentIcon,
+  mailConfirmation,
   nameIcon,
   shareIcon,
 };
