@@ -1,6 +1,7 @@
 import icons from "@/constants/icons";
 import AuthPageWrapper from "@/components/auth/AuthPageWrapper";
 import AuthFormWrapper from "@/components/auth/AuthFormWrapper";
+import SignupForm from "@/components/auth/SignupForm";
 
 const SignUpPage = () => {
   return (
@@ -20,7 +21,7 @@ const SignUpPage = () => {
         authTypeRoute="login"
         authTypeTitle="Login"
       >
-        <form></form>
+        <SignupForm />
       </AuthFormWrapper>
     </AuthPageWrapper>
   );

@@ -1,7 +1,7 @@
 import AuthPageWrapper from "@/components/auth/AuthPageWrapper";
 import AuthFormWrapper from "@/components/auth/AuthFormWrapper";
 import icons from "@/constants/icons";
-import LoginForm from "@/components/auth/login/LoginForm";
+import LoginForm from "@/components/auth/LoginForm";
 
 const LoginPage = () => {
   return (

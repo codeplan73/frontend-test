@@ -36,18 +36,20 @@ const AuthPageWrapper = ({ children, chartIcon }: AuthPageWrapperProps) => {
         </div>
       </div>
 
-      <div className="w-full md:w-1/2 h-full bg-primary flex flex-col gap-6 items-center justify-center z-0">
+      <div className="w-full md:w-1/2 h-full bg-primary flex flex-col gap-6 items-center justify-center z-0 overflow-auto pb-20 pt-40">
         {children}
-      </div>
 
-      {chartIcon && (
-        <div className="absolute bottom-12 right-28 z-50 bg-secondary shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center justify-center p-2 rounded-full gap-2 w-fit h-fit">
-          <div className="flex items-center gap-2 px-3 py-2 rounded-full text-white">
-            <p className="text-xs font-medium">Get help</p>
-            {chartIcon}
+        {chartIcon && (
+          <div className="w-full flex items-end justify-end pr-28 pt-20">
+            <div className=" z-50 bg-secondary shadow-lg hover:shadow-xl transition-shadow duration-300 flex items-center justify-center p-2 rounded-full gap-2 w-fit h-fit">
+              <div className="flex items-center gap-2 px-3 py-2 rounded-full text-white">
+                <p className="text-xs font-medium">Get help</p>
+                {chartIcon}
+              </div>
+            </div>
           </div>
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 };
