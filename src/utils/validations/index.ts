@@ -23,3 +23,9 @@ export const loginFormSchema = z.object({
     message: "Password must be at least 6 characters.",
   }),
 });
+
+export const OTPFormSchema = z.object({
+  pin: z.string().min(4, {
+    message: "Your one-time password must be 6 characters.",
+  }),
+});

@@ -6,6 +6,7 @@ import {
   LoginPage,
   SignUpPage,
   EmailConfirmationPage,
+  VerifyOTPPage,
 } from "./pages";
 
 export const router = createBrowserRouter([
@@ -17,6 +18,7 @@ export const router = createBrowserRouter([
       { path: "login", element: <LoginPage /> },
       { path: "register", element: <SignUpPage /> },
       { path: "email-confirmation", element: <EmailConfirmationPage /> },
+      { path: "verify-otp", element: <VerifyOTPPage /> },
     ],
   },
 ]);
