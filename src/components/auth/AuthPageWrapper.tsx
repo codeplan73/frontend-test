@@ -2,6 +2,7 @@ import images from "@/constants/images";
 import icons from "@/constants/icons";
 import AuthPageWrapperItem from "./AuthPageWrapperItem";
 import type { ReactNode } from "react";
+import { Link } from "react-router";
 
 interface AuthPageWrapperProps {
   children: ReactNode;
@@ -11,8 +12,10 @@ interface AuthPageWrapperProps {
 const AuthPageWrapper = ({ children, chartIcon }: AuthPageWrapperProps) => {
   return (
     <div className="flex h-screen w-screen relative">
-      <div className="hidden md:flex w-1/2 bg-white h-full flex-col items-start justify-start md:p-12 lg:px-32 lg:py-22 gap-32 z-0">
-        <img src={images.logo} alt="logo" className="w-[120px] h-[36px]" />
+      <div className="hidden md:flex w-1/2 bg-white h-full flex-col items-start justify-start md:p-12 lg:px-32 lg:py-22 gap-32 z-0 overflow-hidden">
+        <Link to="/">
+          <img src={images.logo} alt="logo" className="w-[120px] h-[36px]" />
+        </Link>
         <div className="flex flex-col gap-24">
           <div className="flex flex-col gap-6">
             <AuthPageWrapperItem
