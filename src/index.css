@@ -41,6 +41,20 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
+.mulish {
+  font-family: "Mulish", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  font-family: "Mulish", sans-serif !important;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
   --white: #ffffff;
   --black: #2e2e2e;
