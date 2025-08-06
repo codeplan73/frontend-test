@@ -1,8 +1,6 @@
-import React from "react";
-
 const Dashboard = () => {
   return (
-    <div>
+    <div className="bg-slate-200">
       <h4>Dashboard Section</h4>
     </div>
   );

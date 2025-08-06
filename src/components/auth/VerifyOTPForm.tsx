@@ -15,8 +15,10 @@ import {
   InputOTPGroup,
   InputOTPSlot,
 } from "@/components/ui/input-otp";
+import { useNavigate } from "react-router";
 
 const VerifyOTPForm = () => {
+  const navigate = useNavigate();
   const form = useForm<z.infer<typeof OTPFormSchema>>({
     resolver: zodResolver(OTPFormSchema),
     defaultValues: {
@@ -26,6 +28,7 @@ const VerifyOTPForm = () => {
 
   function onSubmit(data: z.infer<typeof OTPFormSchema>) {
     console.log(data);
+    navigate("/email-verified", { state: { email: data.pin } });
   }
   return (
     <Form {...form}>

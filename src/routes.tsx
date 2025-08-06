@@ -1,5 +1,5 @@
 import { createBrowserRouter } from "react-router";
-import AuthLayout from "@/components/layout/AuthLayout";
+import { AuthLayout, AppLayout } from "@/components/layout";
 
 import {
   WelcomePage,
@@ -8,6 +8,8 @@ import {
   EmailConfirmationPage,
   VerifyOTPPage,
   EmailVerifiedPage,
+  Dashboard,
+  MessagesPage,
 } from "./pages";
 
 export const router = createBrowserRouter([
@@ -21,6 +23,14 @@ export const router = createBrowserRouter([
       { path: "email-confirmation", element: <EmailConfirmationPage /> },
       { path: "verify-otp", element: <VerifyOTPPage /> },
       { path: "email-verified", element: <EmailVerifiedPage /> },
+    ],
+  },
+  {
+    path: "/",
+    element: <AppLayout />,
+    children: [
+      { path: "dashboard", element: <Dashboard /> },
+      { path: "messages", element: <MessagesPage /> },
     ],
   },
 ]);

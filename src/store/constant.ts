@@ -1,6 +1,8 @@
-export const BASE_URL = "https:tmm-api.thewalrustech.com/api/v1";
+export const BASE_URL = "https://fe-test.zojapay.com/api";
 
 // auth
-export const LOGIN = "/auth/login";
-export const CHANGE_PASSWORD = "/auth/change-password";
+export const REGISTER = "/admin/register";
+export const VARIFY_OTP = "/admin/verify-otp";
+export const RESEND_OTP = "/admin/resend-otp";
+export const LOGIN = "/admin/login";
 export const LOGOUT = "/auth/sign-out";

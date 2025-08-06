@@ -4,5 +4,7 @@ export { default as SignUpPage } from "@/pages/auth/SignUp/SignUpPage";
 export { default as EmailConfirmationPage } from "@/pages/auth/EmailConfirmation/EmailConfirmationPage";
 export { default as VerifyOTPPage } from "@/pages/auth/VerifyOTP/VerifyOTPPage";
 export { default as EmailVerifiedPage } from "@/pages/auth/EmailVerified/EmailVerifiedPage";
+export { default as Dashboard } from "@/pages/Dashboard/Dashboard";
+export { default as MessagesPage } from "@/pages/Messages/MessagesPage";
 
 export { default as NotFound } from "@/pages/NotFound";

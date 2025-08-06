@@ -18,22 +18,50 @@ import {
   FormMessage,
 } from "@/components/ui/form";
 
+import { useNavigate } from "react-router";
+// import { useDispatch } from "react-redux";
+import { useRegisterMutation } from "@/store/features/auth/authApiSlice";
+
 const SignupForm = () => {
   const [active, setActive] = useState(false);
+  const navigate = useNavigate();
+  // const dispatch = useDispatch();
+
+  const [register, { isLoading }] = useRegisterMutation();
 
   const form = useForm<z.infer<typeof signUpFormSchema>>({
     resolver: zodResolver(signUpFormSchema),
     defaultValues: {
-      firstname: "",
-      lastname: "",
+      first_name: "",
+      last_name: "",
       email: "",
       password: "",
     },
   });
 
-  function onSubmit(values: z.infer<typeof signUpFormSchema>) {
+  const onSubmit = async (values: z.infer<typeof signUpFormSchema>) => {
     console.log(values);
-  }
+    // navigate("/email-confirmation", { state: { email: values.email } });
+    try {
+      const response = await register(values).unwrap();
+      console.log("Registration response:", response);
+      // navigate("/verify-otp", { state: { email: values.email } });
+
+      // if (response.success) {
+      //   navigate("/auth/verify-otp", { state: { email: values.email } });
+      // } else {
+      //   // Handle error response
+      //   console.error("Registration failed:", response.message);
+      // }
+    } catch (error) {
+      console.error("Registration error:", error);
+    }
+    form.reset();
+    setActive(false);
+    // dispatch({ type: "auth/reset" });
+    // navigate("/auth/login");
+    console.log("Form submitted successfully");
+  };
 
   return (
     <Form {...form}>
@@ -47,7 +75,7 @@ const SignupForm = () => {
         <div className="flex transition-all duration-300 space-x-4">
           <FormField
             control={form.control}
-            name="firstname"
+            name="first_name"
             render={({ field }) => (
               <FormItem className="transition-all duration-300">
                 <FormLabel
@@ -61,6 +89,7 @@ const SignupForm = () => {
                   <RiUser3Fill className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#B0BABF]" />
                   <FormControl>
                     <Input
+                      disabled={isLoading}
                       placeholder="First Name"
                       {...field}
                       className={`rounded-[6px] pl-10 transition-colors duration-200 focus-visible:ring focus-visible:ring-secondary focus-visible:border-secondary focus-visible:outline-none ${
@@ -77,7 +106,7 @@ const SignupForm = () => {
           />
           <FormField
             control={form.control}
-            name="lastname"
+            name="last_name"
             render={({ field }) => (
               <FormItem className="transition-all duration-300">
                 <FormLabel
@@ -91,6 +120,7 @@ const SignupForm = () => {
                   <RiUser3Fill className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#B0BABF]" />
                   <FormControl>
                     <Input
+                      disabled={isLoading}
                       placeholder="Last Name"
                       {...field}
                       className={`rounded-[6px] pl-10 transition-colors duration-200 focus-visible:ring focus-visible:ring-secondary focus-visible:border-secondary focus-visible:outline-none ${
@@ -123,6 +153,7 @@ const SignupForm = () => {
                 <IoMdMail className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#B0BABF]" />
                 <FormControl>
                   <Input
+                    disabled={isLoading}
                     placeholder="Work email"
                     {...field}
                     className={`rounded-[6px] pl-10 transition-colors duration-200 focus-visible:ring focus-visible:ring-secondary focus-visible:border-secondary focus-visible:outline-none ${
@@ -152,6 +183,8 @@ const SignupForm = () => {
                 <FaUnlockAlt className="absolute left-3 top-1/2 transform -translate-y-1/2 h-5 w-5 text-[#B0BABF]" />
                 <FormControl>
                   <Input
+                    disabled={isLoading}
+                    type="password"
                     placeholder="Password"
                     {...field}
                     className={`rounded-[6px] pl-10 transition-colors duration-200 focus-visible:ring focus-visible:ring-secondary focus-visible:border-secondary focus-visible:outline-none ${
@@ -166,7 +199,7 @@ const SignupForm = () => {
         />
 
         <Button
-          disabled={!active}
+          disabled={!active || isLoading}
           className={`w-full rounded-[6px] transition-all duration-300 ${
             !active
               ? "bg-[#ECEDED] text-slate-400 cursor-not-allowed"

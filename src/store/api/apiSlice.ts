@@ -2,7 +2,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 import Cookies from "js-cookie";
 import { BASE_URL } from "@/store/constant";
 
-const getToken = () => Cookies.get("tmmToken");
+const getToken = () => Cookies.get("buddy_token");
 
 export const apiSlice = createApi({
   reducerPath: "api",

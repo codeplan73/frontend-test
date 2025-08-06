@@ -7,8 +7,14 @@ import {
 import AuthPageWrapper from "@/components/auth/AuthPageWrapper";
 import icons from "@/constants/icons";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from "react-router";
 
 const EmailVerifiedPage = () => {
+  const navigate = useNavigate();
+  const handleEmailVerified = () => {
+    // Logic to verify OTP goes here
+    navigate("/dashboard"); // Redirect to the dashboard or another page after verification
+  };
   return (
     <AuthPageWrapper>
       <Card className="w-[489px] shadow-xl drop-shadow-xl rounded-[8px] border border-[#DDE2E4] p-8 py-12 bg-white flex flex-col">
@@ -29,6 +35,7 @@ const EmailVerifiedPage = () => {
           <Button
             className="w-[160px] rounded-[6px] transition-all duration-300 bg-secondary hover:bg-blue-500 text-white"
             type="submit"
+            onClick={handleEmailVerified}
           >
             Continue
           </Button>

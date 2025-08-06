@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import {
   Card,
   CardContent,
@@ -10,6 +10,11 @@ import icons from "@/constants/icons";
 import { Button } from "@/components/ui/button";
 
 const EmailConfirmationPage = () => {
+  const navigate = useNavigate();
+  const handleConfirmEmail = () => {
+    // Logic to confirm email goes here
+    navigate("/verify-otp");
+  };
   return (
     <AuthPageWrapper>
       <Card className="w-[489px] shadow-xl drop-shadow-xl rounded-[8px] border border-[#DDE2E4] p-8 py-12 bg-white flex flex-col">
@@ -30,6 +35,7 @@ const EmailConfirmationPage = () => {
           <Button
             className="w-[160px] rounded-[6px] transition-all duration-300 bg-secondary hover:bg-blue-500 text-white"
             type="submit"
+            onClick={handleConfirmEmail}
           >
             Confirm Email
           </Button>
