@@ -1,5 +1,6 @@
 import StatsCardList from "@/components/dashboard/StatsCardList";
 import { ChartBarMultiple } from "@/components/dashboard/chart/BarChart";
+import TrendingPost from "@/components/dashboard/post/TrendingPost";
 
 const Dashboard = () => {
   return (
@@ -7,6 +8,8 @@ const Dashboard = () => {
       <div className="col-span-1 md:col-span-2 w-[772px] flex flex-col gap-6">
         <StatsCardList />
         <ChartBarMultiple />
+
+        <TrendingPost />
       </div>
 
       <div className="col-span-1 w-[330px]">

@@ -46,7 +46,7 @@ const chartConfig = {
 
 export function ChartBarMultiple() {
   return (
-    <div className="flex flex-col gap-4 bg-white p-4 rounded-md">
+    <div className="flex flex-col gap-4 bg-white p-4 rounded-[16px] h-[320px]">
       <ChartHeader />
       <ChartContainer
         config={chartConfig}
