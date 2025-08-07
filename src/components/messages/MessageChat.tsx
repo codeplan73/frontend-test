@@ -1,10 +1,11 @@
 import images from "@/constants/images";
 
 import MessageChatHeader from "./MessageChatHeader";
+import ChatInput from "./ChatInput";
 
 const MessageChat = () => {
   return (
-    <div className="w-[776px] bg-[#FAFAFA] rounded-[12px] p-4 flex flex-col">
+    <div className="w-[766px] bg-[#FAFAFA] rounded-[12px] p-4  flex flex-col">
       <MessageChatHeader />
       <hr className="my-4 border-[#D9D9D9]" />
 
@@ -99,6 +100,8 @@ const MessageChat = () => {
           />
         </div>
       </div>
+
+      <ChatInput />
     </div>
   );
 };

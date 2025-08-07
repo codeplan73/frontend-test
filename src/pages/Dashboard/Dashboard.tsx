@@ -8,8 +8,8 @@ import WatchList from "@/components/dashboard/sidebar/WatchList";
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col md:flex-row gap-6 p-4 ">
-      <div className="col-span-1 md:col-span-2 w-[772px] flex flex-col gap-6">
+    <div className="flex flex-col md:flex-row gap-6 p-4 w-full md:w-[1100px] rounded-[12px]">
+      <div className="col-span-1 md:col-span-2 w-[770px] flex flex-col gap-6">
         <StatsCardList />
         <ChartBarMultiple />
 

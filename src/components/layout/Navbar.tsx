@@ -12,7 +12,7 @@ const Navbar = () => {
     pathSegments.charAt(0).toUpperCase() + pathSegments.slice(1);
 
   return (
-    <nav className="h-[50px] flex items-center justify-between px-8 pt-12 pb-2">
+    <nav className="h-[48px] w-[1134px] flex items-center justify-between px-8 pt-12 pb-2">
       <p className="text-[#3B3B45] text-[25px] font-bold mulish-bold">
         {formmattedPath === "Dashboard" ? "My Portfolio" : formmattedPath}
       </p>

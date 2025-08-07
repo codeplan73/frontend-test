@@ -5,7 +5,7 @@ import Message from "./Message";
 
 const MessageList = () => {
   return (
-    <div className="w-[276px] bg-[#FAFAFA] rounded-[12px] p-4 flex flex-col gap-8">
+    <div className="w-[266px] bg-[#FAFAFA] rounded-[12px] p-4 flex flex-col gap-8">
       <ActiveUser />
 
       <SearchField

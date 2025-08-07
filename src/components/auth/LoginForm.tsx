@@ -15,9 +15,11 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
+import { useNavigate } from "react-router";
 
 const LoginForm = () => {
   const [active, setActive] = useState(false);
+  const navigate = useNavigate();
 
   const form = useForm<z.infer<typeof loginFormSchema>>({
     resolver: zodResolver(loginFormSchema),
@@ -29,6 +31,7 @@ const LoginForm = () => {
 
   function onSubmit(values: z.infer<typeof loginFormSchema>) {
     console.log(values);
+    navigate("/dashboard", { state: { email: values.email } });
   }
 
   return (

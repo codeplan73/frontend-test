@@ -17,17 +17,17 @@ const AppLayout = () => {
   }
 
   return (
-    <div className="flex h-full w-full overflow-hidden">
+    <div className="flex h-full w-full overflow-hidden mx-auto">
       <aside className="w-64 h-full bg-white z-30">
         <Sidebar />
       </aside>
 
-      <div className="flex flex-col flex-1 h-full gap-8 bg-[#f1f1f2]">
+      <div className="flex flex-col flex-1 h-full gap-4 bg-[#f1f1f2]">
         <header className="">
           <Navbar />
         </header>
 
-        <main className="overflow-y-auto px-4 bg-[#f1f1f2]">
+        <main className="overflow-y-auto px-4 pb-6 bg-[#f1f1f2]">
           <Outlet />
         </main>
       </div>
