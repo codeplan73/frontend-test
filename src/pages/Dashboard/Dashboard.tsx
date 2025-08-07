@@ -1,5 +1,6 @@
-import StatsCardList from "@/components/dashboard/StatsCardList";
+import StatsCardList from "@/components/dashboard/cards/StatsCardList";
 import { ChartBarMultiple } from "@/components/dashboard/chart/BarChart";
+import MembersList from "@/components/dashboard/Members/MembersList";
 import TrendingPost from "@/components/dashboard/post/TrendingPost";
 
 const Dashboard = () => {
@@ -10,6 +11,7 @@ const Dashboard = () => {
         <ChartBarMultiple />
 
         <TrendingPost />
+        <MembersList />
       </div>
 
       <div className="col-span-1 w-[330px]">
