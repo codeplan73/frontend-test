@@ -1,7 +1,7 @@
 import { NavLink } from "react-router";
 import { FiPlus } from "react-icons/fi";
 import { LiaBell } from "react-icons/lia";
-import { IoIosSearch } from "react-icons/io";
+import SearchField from "../common/SearchField";
 import { useLocation } from "react-router";
 
 const Navbar = () => {
@@ -17,14 +17,10 @@ const Navbar = () => {
         {formmattedPath === "Dashboard" ? "My Portfolio" : formmattedPath}
       </p>
       <ul className="flex items-center gap-[16px]">
-        <div className="flex items-center gap-4 relative">
-          <input
-            type="text"
-            placeholder="Search"
-            className="border h-[40px] w-[422px] pl-8 bg-white rounded-[16px] border-none focus-visible:ring-0  px-3 py-1"
-          />
-          <IoIosSearch className="w-[18px] h-[18px] absolute left-2 " />
-        </div>
+        <SearchField
+          className=" h-[40px] w-[422px]  rounded-[16px]"
+          iconClass="w-[18px] h-[18px] absolute left-2"
+        />
         <li className="relative">
           <NavLink
             to="#"
