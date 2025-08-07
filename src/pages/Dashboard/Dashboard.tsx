@@ -2,6 +2,7 @@ import StatsCardList from "@/components/dashboard/cards/StatsCardList";
 import { ChartBarMultiple } from "@/components/dashboard/chart/BarChart";
 import MembersList from "@/components/dashboard/Members/MembersList";
 import TrendingPost from "@/components/dashboard/post/TrendingPost";
+import TrendingNewsList from "@/components/dashboard/sidebar/news/TrendingNewsList";
 import Revenue from "@/components/dashboard/sidebar/revenue/Revenue";
 import WatchList from "@/components/dashboard/sidebar/WatchList";
 
@@ -19,6 +20,7 @@ const Dashboard = () => {
       <div className="col-span-1 w-[330px] flex flex-col gap-4">
         <WatchList />
         <Revenue />
+        <TrendingNewsList />
       </div>
     </div>
   );
