@@ -12,6 +12,9 @@ import mailSentIcon from "@/assets/icons/mail-sent-icon.png";
 import mailConfirmation from "@/assets/icons/mail-confirmation.png";
 import nameIcon from "@/assets/icons/Name-icon.png";
 import shareIcon from "@/assets/icons/share.png";
+import facebook from "@/assets/icons/facebook.png";
+import linkedin from "@/assets/icons/linkedin.png";
+import instagram from "@/assets/icons/instagram.png";
 
 export default {
   chatIcon,
@@ -28,4 +31,7 @@ export default {
   mailConfirmation,
   nameIcon,
   shareIcon,
+  facebook,
+  linkedin,
+  instagram,
 };
