@@ -1,6 +1,7 @@
 import chatIcon from "@/assets/icons/chatIcon.png";
 import cardIcon1 from "@/assets/icons/card-icon-1.png";
 import cardIcon2 from "@/assets/icons/card-icon-2.png";
+import cardIcon3 from "@/assets/icons/cad-icin-3.png";
 import checkIcon from "@/assets/icons/check-icon.png";
 import commentIcon from "@/assets/icons/comment.png";
 import googleIcon from "@/assets/icons/Google-icon.png";
@@ -16,6 +17,7 @@ export default {
   chatIcon,
   cardIcon1,
   cardIcon2,
+  cardIcon3,
   checkIcon,
   commentIcon,
   googleIcon,
