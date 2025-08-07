@@ -15,6 +15,7 @@ import shareIcon from "@/assets/icons/share.png";
 import facebook from "@/assets/icons/facebook.png";
 import linkedin from "@/assets/icons/linkedin.png";
 import instagram from "@/assets/icons/instagram.png";
+import send from "@/assets/icons/chat-send.png";
 
 export default {
   chatIcon,
@@ -34,4 +35,5 @@ export default {
   facebook,
   linkedin,
   instagram,
+  send,
 };

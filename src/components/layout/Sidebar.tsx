@@ -52,30 +52,30 @@ const Sidebar = () => {
   const currentPath = location.pathname;
 
   return (
-    <aside className="bg-white w-[250px] h-[1080px] flex flex-col items-center justify-start ">
+    <aside className="bg-white w-[250px] h-[1080px] flex flex-col items-center justify-start">
       <Link to="/dashboard" className="mt-[28px]">
         <img src={images.logo} alt="logo" className="w-[120px] h-[36px]" />
       </Link>
 
       <div className="w-full flex flex-col justify-between h-full py-6">
-        <ul className="flex flex-col gap-2 w-full ">
+        <ul className="flex flex-col gap-2 w-full">
           {menuItems.map((item) => {
             const isActive = item.link === currentPath;
 
             return (
               <li
                 key={item.id}
-                className="w-full px- flex items-center transition-all relative"
+                className="w-full flex items-center transition-all relative px-4"
               >
                 {isActive && (
-                  <span className="w-2 h-2/3 bg-secondary rounded-r-2xl -pl-6"></span>
+                  <span className="absolute left-0 top-1/2 -translate-y-1/2 w-[6px] h-[60%] bg-secondary rounded-r-md" />
                 )}
                 <Link
                   to={item.link}
-                  className={`flex items-center gap-2 pl-10 mx-4 px-4 py-4 w-full rounded-xl transition-all
+                  className={`flex items-center gap-2 pl-6 py-4 w-full rounded-xl transition-all
                     ${
                       isActive
-                        ? "bg-white text-secondary shadow-md font-semibold "
+                        ? "bg-white text-secondary shadow-md font-semibold"
                         : "text-gray-500 hover:text-secondary hover:bg-white hover:shadow-md"
                     }
                   `}

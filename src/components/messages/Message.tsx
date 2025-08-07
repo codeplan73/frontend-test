@@ -1,15 +1,15 @@
 import { IoCheckmarkSharp } from "react-icons/io5";
 
-type MessageProps = {
+interface MessageProps {
   id: number;
   sender: string;
   content: string;
   timestamp: string;
-  read: boolean;
+  read: boolean | string;
   unread: number;
   userImage: string;
   active: boolean | string;
-};
+}
 const Message = ({
   message,
   index,
@@ -21,7 +21,9 @@ const Message = ({
     <div
       key={index}
       className={`flex items-center justify-between w-full px-2 ${
-        !message.active ? "bg-white rounded-[10px] p-2 drop-shadow-xl " : ""
+        message.active === true
+          ? "bg-white rounded-[10px] p-2 drop-shadow-xl "
+          : ""
       }`}
     >
       <div className="flex items-center gap-2 ">
@@ -44,7 +46,7 @@ const Message = ({
         <p className="text-[#959595] text-[9px] font-semibold text-nowrap">
           {message.timestamp}
         </p>
-        {!message.active ? (
+        {message.active !== true ? (
           message.unread > 0 ? (
             <p className="text-white text-[9px] font-semibold bg-secondary h-[12px] w-[12px] text-center rounded-full">
               {message.unread}
