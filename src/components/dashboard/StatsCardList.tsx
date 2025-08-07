@@ -1,9 +1,9 @@
 import icons from "@/constants/icons";
-import StatsCard from "@/components/dashboard/StatsCard";
+import StatsCard from "@/components/dashboard/cards/StatsCard";
 
 const StatsCardList = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
       <StatsCard
         value="52"
         label="Total Channel"

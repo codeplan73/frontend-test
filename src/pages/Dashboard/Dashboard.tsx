@@ -1,13 +1,17 @@
 import StatsCardList from "@/components/dashboard/StatsCardList";
+import { ChartBarMultiple } from "@/components/dashboard/chart/BarChart";
 
 const Dashboard = () => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-4 p-4">
-      <div className="col-span-1 md:col-span-2">
+    <div className="flex flex-col md:flex-row gap-6 p-4 ">
+      <div className="col-span-1 md:col-span-2 w-[772px] flex flex-col gap-6">
         <StatsCardList />
+        <ChartBarMultiple />
       </div>
 
-      <div className="col-span-1"></div>
+      <div className="col-span-1 w-[330px]">
+        <div className="bg-white">This is cool</div>
+      </div>
     </div>
   );
 };

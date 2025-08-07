@@ -52,7 +52,7 @@ const Sidebar = () => {
   const currentPath = location.pathname;
 
   return (
-    <aside className="bg-white w-[250px] h-full flex flex-col items-center justify-start ">
+    <aside className="bg-white w-[250px] h-[1080px] flex flex-col items-center justify-start ">
       <Link to="/dashboard" className="mt-[28px]">
         <img src={images.logo} alt="logo" className="w-[120px] h-[36px]" />
       </Link>
