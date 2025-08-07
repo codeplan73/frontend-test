@@ -1,6 +1,6 @@
 import images from "@/constants/images";
 
-export const messages = [
+export const messagesList = [
   {
     id: 1,
     sender: "Lisa Roy",
